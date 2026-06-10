@@ -3,19 +3,19 @@
 ## 📷 Demonstração
 
 <p align="center">
-  <img src="images/TELA-INICIAL.png" width="900">
+  <img src="images/TELA INICIAL.jpg" width="900">
 </p>
 
 <p align="center">
-  <img src="images/chat-eva.png" width="900">
+  <img src="images/CONVERSA EVA.jpg" width="900">
 </p>
 
 <p align="center">
-  <img src="images/chat-elias.png" width="900">
+  <img src="images/CONVERSA ELIAS.jpg" width="900">
 </p>
 
 <p align="center">
-  <img src="images/chat-dani.png" width="900">
+  <img src="images/CONVERSA DANI.jpg" width="900">
 </p>
 
 # 🎯 Sistema de Fluxos Conversacionais
