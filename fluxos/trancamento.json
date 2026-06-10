@@ -1,0 +1,29 @@
+{
+  "id": "trancamento",
+  "nome": "Trancamento de Matrícula",
+  "keywords": [
+    "trancar",
+    "trancamento",
+    "cancelar matrícula",
+    "parar de estudar",
+    "sair do curso"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "mensagem": "Entendo que deseja trancar sua matrícula. Para começarmos, você poderia compartilhar o RA (Registro Acadêmico) para identificar corretamente sua matrícula?"
+    },
+    {
+      "id": 2,
+      "mensagem": "Obrigado. Agora, poderia me informar o motivo do trancamento? Isso nos ajuda a orientá-lo melhor sobre as melhores alternativas."
+    },
+    {
+      "id": 3,
+      "mensagem": "Perfeito! Deixe-me confirmar os dados: RA {ra}, motivo: {motivo}. Está tudo certo? Se sim, posso encaminhar sua solicitação à secretaria acadêmica."
+    },
+    {
+      "id": 4,
+      "mensagem": "Sua solicitação de trancamento foi encaminhada com sucesso! Você receberá uma confirmação por email. Em caso de dúvidas, entre em contato com a secretaria acadêmica."
+    }
+  ]
+}

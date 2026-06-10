@@ -1,0 +1,29 @@
+{
+  "id": "bilhete-unico",
+  "nome": "Bilhete Único Estudante",
+  "keywords": [
+    "bilhete único",
+    "vale transporte",
+    "transporte",
+    "sprans",
+    "gratuidade"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "mensagem": "Claro! Vou ajudar você com informações sobre o Bilhete Único Estudante. Primeiro, você já possui um Bilhete Único ativo ou é a primeira vez que solicita?"
+    },
+    {
+      "id": 2,
+      "mensagem": "Para solicitar ou renovar o Bilhete Único, você precisa ter cadastro atualizado no CadÚnico e atender aos critérios de renda familiar. Você já tem CadÚnico?"
+    },
+    {
+      "id": 3,
+      "mensagem": "Ótimo! A próxima etapa é comparecer a uma estação SPTrans com: documento de identidade, comprovante de matrícula e comprovante do CadÚnico. Qual estação fica mais próxima de você?"
+    },
+    {
+      "id": 4,
+      "mensagem": "Excelente! Você está preparado para solicitar o seu Bilhete Único. Qualquer dúvida adicional, estou aqui para ajudar!"
+    }
+  ]
+}

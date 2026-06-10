@@ -1,0 +1,26 @@
+{
+  "id": "acessibilidade",
+  "nome": "Recursos de Acessibilidade",
+  "keywords": [
+    "acessibilidade",
+    "deficiência",
+    "acessível",
+    "adaptação",
+    "necessidade especial",
+    "atendimento especial"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "mensagem": "Ficamos felizes que você deseja usar nossos recursos de acessibilidade! Como posso ajudá-lo? (leitura em voz alta, modo daltonismo, ajuste de fonte ou outra necessidade)"
+    },
+    {
+      "id": 2,
+      "mensagem": "Qual é sua necessidade de acessibilidade? Podemos ativar diferentes recursos conforme sua preferência."
+    },
+    {
+      "id": 3,
+      "mensagem": "Excelente! Ativei os recursos de acessibilidade que você solicitou. Agora nossa conversa deve ser mais acessível para você. Precisa de mais algo?"
+    }
+  ]
+}

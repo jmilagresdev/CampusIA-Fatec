@@ -1,0 +1,29 @@
+{
+  "id": "renovacao-rg",
+  "nome": "Documentação para Renovação de RG",
+  "keywords": [
+    "rg",
+    "documento",
+    "renovar documento",
+    "documentação pessoal",
+    "carteira de identidade"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "mensagem": "Ótimo! Vou ajudar você com informações sobre renovação de RG. Primeiramente, seu RG está vencido ou você está buscando renovar antes de vencer?"
+    },
+    {
+      "id": 2,
+      "mensagem": "Entendi. Para renovar o RG, você vai precisar de alguns documentos. Você já possui: cédula de nascimento original ou cartório, documento anterior (RG antigo) e comprovante de residência?"
+    },
+    {
+      "id": 3,
+      "mensagem": "Ótimo! Com esses documentos em mãos, você precisa se dirigir a uma delegacia de polícia ou local de atendimento do Detran mais próximo. Gostaria de saber em que bairro você mora para indicar o endereço correto?"
+    },
+    {
+      "id": 4,
+      "mensagem": "Perfeito! Procure pelo local de atendimento em {bairro}. Geralmente, o processo leva de 15 a 30 dias úteis para ficar pronto. Você receberá um comprovante do atendimento. Precisa de mais alguma informação?"
+    }
+  ]
+}

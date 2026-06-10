@@ -1,0 +1,28 @@
+{
+  "id": "calendario",
+  "nome": "Calendário Acadêmico",
+  "keywords": [
+    "calendário",
+    "datas",
+    "semestre",
+    "provas",
+    "rematrícula",
+    "matrícula",
+    "férias",
+    "recess"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "mensagem": "Ótimo! Posso te ajudar consultando o calendário acadêmico. Qual informação você busca? (datas do semestre, provas, matrícula, trancamento ou outra data específica)"
+    },
+    {
+      "id": 2,
+      "mensagem": "Para ajudá-lo melhor, em qual semestre você está? (1º, 2º, 3º, 4º, 5º ou 6º semestre)"
+    },
+    {
+      "id": 3,
+      "mensagem": "Encontrei as datas para você! {informacaoDatas}. Precisa de mais alguma informação sobre o calendário?"
+    }
+  ]
+}

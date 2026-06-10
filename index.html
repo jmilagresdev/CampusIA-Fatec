@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover, user-scalable=yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>EVA - Totem Acadêmico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-chat" viewBox="0 0 24 24">
+      <path d="M5 18.5 3.5 22l4.2-1.4A9 9 0 1 0 3 12.8a8.7 8.7 0 0 0 2 5.7Z" />
+      <path d="M8 11h8M8 15h5" />
+    </symbol>
+    <symbol id="icon-access" viewBox="0 0 24 24">
+      <circle cx="12" cy="4" r="2" />
+      <path d="M5 8h14M12 8v5M8 22l4-9 4 9M7 15h10" />
+    </symbol>
+    <symbol id="icon-refresh" viewBox="0 0 24 24">
+      <path d="M20 12a8 8 0 1 1-2.3-5.7" />
+      <path d="M20 4v6h-6" />
+    </symbol>
+    <symbol id="icon-volume" viewBox="0 0 24 24">
+      <path d="M4 9v6h4l5 4V5L8 9H4Z" />
+      <path d="M17 9.5a4 4 0 0 1 0 5M19.5 7a7.5 7.5 0 0 1 0 10" />
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <rect x="5" y="10" width="14" height="10" rx="2" />
+      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+    </symbol>
+    <symbol id="icon-bus" viewBox="0 0 24 24">
+      <rect x="5" y="4" width="14" height="14" rx="3" />
+      <path d="M8 8h8M8 12h8M8 18v2M16 18v2" />
+    </symbol>
+    <symbol id="icon-id" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="14" rx="2" />
+      <path d="M8 9h4M8 13h8M14 9h2" />
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M7 3h7l4 4v14H7V3Z" />
+      <path d="M14 3v5h5M9 13h6M9 17h6" />
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="15" rx="2" />
+      <path d="M8 3v4M16 3v4M4 10h16M8 14h.1M12 14h.1M16 14h.1M8 17h.1M12 17h.1" />
+    </symbol>
+    <symbol id="icon-mic" viewBox="0 0 24 24">
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8" />
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24">
+      <path d="M22 2 11 13" />
+      <path d="m22 2-7 20-4-9-9-4 20-7Z" />
+    </symbol>
+    <symbol id="icon-keyboard" viewBox="0 0 24 24">
+      <rect x="3" y="6" width="18" height="12" rx="2" />
+      <path d="M7 10h.1M10 10h.1M13 10h.1M16 10h.1M7 14h7M17 14h.1" />
+    </symbol>
+    <symbol id="icon-power" viewBox="0 0 24 24">
+      <path d="M12 2v10" />
+      <path d="M6.3 6.8a8 8 0 1 0 11.4 0" />
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" />
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24">
+      <path d="M12 3 5 6v5c0 4.5 2.8 8.6 7 10 4.2-1.4 7-5.5 7-10V6l-7-3Z" />
+      <path d="m9 12 2 2 4-5" />
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H7a3 3 0 0 0-3 3V5.5Z" />
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M9 7h6M9 11h4" />
+    </symbol>
+    <symbol id="icon-type" viewBox="0 0 24 24">
+      <path d="M4 19 10 5h2l6 14M7 14h8" />
+      <path d="M19 8v6M16 11h6" />
+    </symbol>
+    <symbol id="icon-bold" viewBox="0 0 24 24">
+      <path d="M7 4h7a4 4 0 0 1 0 8H7V4Z" />
+      <path d="M7 12h8a4 4 0 0 1 0 8H7v-8Z" />
+    </symbol>
+    <symbol id="icon-lines" viewBox="0 0 24 24">
+      <path d="M8 6h12M8 12h12M8 18h12M4 5v14M2 7l2-2 2 2M2 17l2 2 2-2" />
+    </symbol>
+    <symbol id="icon-letters" viewBox="0 0 24 24">
+      <path d="M4 17 8 7h2l4 10M6 13h6M17 8v8M14 13h6" />
+    </symbol>
+    <symbol id="icon-reader" viewBox="0 0 24 24">
+      <path d="M4 19h16M6 5h12v10H6z" />
+      <path d="M8 9h8M8 12h5" />
+    </symbol>
+    <symbol id="icon-mask" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+      <path d="M5 9h14v6H5z" />
+    </symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24">
+      <path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1" />
+      <path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20.1l1.1-1.1" />
+    </symbol>
+    <symbol id="icon-pause" viewBox="0 0 24 24">
+      <path d="M10 5v14M14 5v14" />
+      <circle cx="12" cy="12" r="9" />
+    </symbol>
+    <symbol id="icon-contrast" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3v18a9 9 0 0 0 0-18Z" />
+    </symbol>
+    <symbol id="icon-drop" viewBox="0 0 24 24">
+      <path d="M12 3s7 7.1 7 12a7 7 0 0 1-14 0c0-4.9 7-12 7-12Z" />
+    </symbol>
+    <symbol id="icon-palette" viewBox="0 0 24 24">
+      <path d="M12 3a9 9 0 0 0 0 18h1.5a2 2 0 0 0 1.4-3.4 1.8 1.8 0 0 1 1.3-3.1H18a3 3 0 0 0 3-3A8.5 8.5 0 0 0 12 3Z" />
+      <path d="M7.5 11h.1M9.5 7.5h.1M14 7.5h.1" />
+    </symbol>
+  </svg>
+
+  <section id="tela-selecao" class="tela-selecao" aria-label="Escolha do assistente virtual">
+    <header class="selecao-topo">
+      <div class="logo-fatec">
+        <strong>FATEC</strong>
+        <span>Zona Sul</span>
+      </div>
+
+      <div class="topo-acoes selecao-acoes">
+        <button type="button" onclick="abrirIdiomas()">
+          <svg class="icon">
+            <use href="#icon-globe"></use>
+          </svg>
+          <span data-i18n="language">Idioma</span>
+        </button>
+        <button type="button" onclick="abrirPersonalizacao()">
+          <svg class="icon">
+            <use href="#icon-access"></use>
+          </svg>
+          <span data-i18n="accessibility">Acessibilidade</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="selecao-conteudo">
+      <h1>Escolha o seu assistente virtual</h1>
+
+      <div class="assistentes-opcoes">
+        <button type="button" class="assistente-card" onclick="selecionarAssistente('eva')"
+          aria-label="Escolher Eva como assistente virtual">
+          <img src="assets/eva-selection.png?v=2" alt="Eva, assistente virtual acadêmica">
+          <strong>EVA</strong>
+          <span>Matrícula, documentos e calendário</span>
+        </button>
+
+        <button type="button" class="assistente-card" onclick="selecionarAssistente('elias')"
+          aria-label="Escolher Elias como assistente virtual">
+          <img src="assets/elias-selection.png?v=2" alt="Elias, assistente virtual acadêmico">
+          <strong>Elias</strong>
+          <span>Carreira, eventos, estágios e setores</span>
+        </button>
+
+        <button type="button" class="assistente-card assistente-card-professor" onclick="selecionarAssistente('dani')"
+          aria-label="Escolher Dani, assistente virtual exclusiva para professores">
+          <img src="assets/dani-professores.png" alt="Dani, assistente virtual exclusiva para professores">
+          <strong>Dani</strong>
+          <span>Área docente: aulas, turmas e relatórios</span>
+        </button>
+      </div>
+    </main>
+  </section>
+
+  <section id="tela-login-professor" class="tela-login-professor" aria-label="Login restrito para professores" hidden>
+    <div class="login-professor-card">
+      <div class="logo-fatec">
+        <strong>FATEC</strong>
+        <span>Zona Sul</span>
+      </div>
+
+      <div class="login-professor-copy">
+        <p class="login-etiqueta">Área restrita para professores</p>
+        <h1>Área Restrita para Professores.</h1>
+        <p>
+          A Dani possui acesso a informações acadêmicas e ferramentas de apoio pedagógico exclusivas para docentes.
+          Para continuar, realize seu login:
+        </p>
+      </div>
+
+      <form id="form-login-professor" class="form-login-professor">
+        <label for="matricula-professor">Matrícula</label>
+        <input id="matricula-professor" name="matricula" type="text" autocomplete="username" inputmode="numeric"
+          required>
+
+        <label for="senha-professor">Senha</label>
+        <input id="senha-professor" name="senha" type="password" autocomplete="current-password" required>
+
+        <p id="erro-login-professor" class="erro-login-professor" aria-live="polite"></p>
+
+        <div class="login-professor-acoes">
+          <button type="submit">Entrar</button>
+          <button type="button" onclick="voltarLoginProfessor()">Voltar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="tela-totem" class="tela-totem" aria-label="Totem de atendimento acadêmico" hidden>
+
+    <header class="barra-topo">
+      <div class="logo-fatec">
+        <strong>FATEC</strong>
+        <span>Zona Sul</span>
+      </div>
+
+      <div class="titulo-totem">
+        <span data-i18n="serviceTotem">TOTEM DE ATENDIMENTO</span>
+        <strong data-i18n="campusName">FATEC ZONA SUL</strong>
+      </div>
+
+      <div class="topo-acoes">
+        <button type="button" onclick="abrirIdiomas()">
+          <svg class="icon">
+            <use href="#icon-globe"></use>
+          </svg>
+          <span data-i18n="language">Idioma</span>
+        </button>
+        <button type="button" onclick="voltarSelecao()">
+          <svg class="icon">
+            <use href="#icon-power"></use>
+          </svg>
+          <span data-i18n="end">Encerrar</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="area-principal">
+
+      <section class="card-assistente" aria-label="Assistente virtual escolhido">
+        <div class="assistente-status">
+          <strong id="nome-assistente-card">EVA</strong>
+          <span id="status-assistente">Pronta para ajudar</span>
+        </div>
+
+        <img id="avatar-totem" src="assets/eva-desk.png" alt="Assistente virtual no computador" class="avatar-totem">
+      </section>
+
+      <section class="card-chat" aria-label="Conversa com o assistente virtual">
+        <main id="chat-box" class="chat-box" aria-live="polite" aria-label="Área de conversa"></main>
+
+        <div id="privacidade-chat" class="privacidade-chat">
+          <svg class="icon">
+            <use href="#icon-shield"></use>
+          </svg>
+          Encerre o atendimento ao finalizar. A conversa é apagada ao sair.
+        </div>
+
+        <footer class="input-area">
+          <button class="btn-anexo" type="button" onclick="input.focus()" aria-label="Abrir teclado">
+            <svg class="icon">
+              <use href="#icon-keyboard"></use>
+            </svg>
+          </button>
+
+          <input id="input" type="text" placeholder="Digite sua mensagem..."
+            aria-label="Digite sua mensagem para o assistente" autocomplete="off" autocorrect="off"
+            autocapitalize="sentences" spellcheck="false">
+
+          <button class="btn-mic" type="button" onclick="ouvirUsuario()" aria-label="Falar usando o microfone">
+            <svg class="icon">
+              <use href="#icon-mic"></use>
+            </svg>
+          </button>
+
+          <button class="btn-cancelar" id="btn-cancelar" type="button" onclick="cancelarResposta()"
+            aria-label="Parar resposta" style="display:none" data-i18n="stop">
+            Parar
+          </button>
+          <button class="btn-enviar" id="btn-enviar" type="button" onclick="enviar()" aria-label="Enviar mensagem"
+            disabled>
+            <svg class="icon">
+              <use href="#icon-send"></use>
+            </svg>
+          </button>
+        </footer>
+      </section>
+
+      <aside class="card-sugestoes" aria-label="Sugestões para você">
+        <h2><svg class="icon">
+            <use href="#icon-star"></use>
+          </svg>Sugestões para você</h2>
+        <p class="texto-orientacao-sugestoes" data-i18n="suggestionHint">Toque em uma opção ou digite sua dúvida.</p>
+
+        <div class="cards-sugestoes" id="cards-sugestoes">
+          <button type="button" onclick="respostaRapida('Quero trancar minha matrícula')">
+            <span><svg class="icon">
+                <use href="#icon-lock"></use>
+              </svg></span>
+            <strong>Trancamento<br>de matrícula</strong>
+          </button>
+
+          <button type="button" onclick="respostaRapida('Quero saber sobre Bilhete Único')">
+            <span><svg class="icon">
+                <use href="#icon-bus"></use>
+              </svg></span>
+            <strong>Bilhete<br>Único</strong>
+          </button>
+
+          <button type="button" onclick="respostaRapida('Quero informações sobre gratuidade e CadÚnico SPTrans')">
+            <span><svg class="icon">
+                <use href="#icon-id"></use>
+              </svg></span>
+            <strong>CadÚnico/<br>SPTrans</strong>
+          </button>
+
+          <button type="button" onclick="respostaRapida('Preciso de documentos acadêmicos')">
+            <span><svg class="icon">
+                <use href="#icon-file"></use>
+              </svg></span>
+            <strong>Documentos<br>Acadêmicos</strong>
+          </button>
+
+          <button type="button" onclick="respostaRapida('Quero consultar o calendário acadêmico')">
+            <span><svg class="icon">
+                <use href="#icon-calendar"></use>
+              </svg></span>
+            <strong>Calendário<br>Acadêmico</strong>
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <section class="barra-acoes" aria-label="Ações do atendimento">
+      <button type="button" class="acao-card acao-destaque" onclick="input.focus()">
+        <span><svg class="icon">
+            <use href="#icon-chat"></use>
+          </svg></span>
+        <strong data-i18n="talkAssistant">Fale com o assistente</strong>
+        <small data-i18n="tapAndType">Toque aqui e digite sua dúvida</small>
+      </button>
+
+      <button type="button" class="acao-card" onclick="abrirPersonalizacao()">
+        <span><svg class="icon">
+            <use href="#icon-access"></use>
+          </svg></span>
+        <strong data-i18n="accessibility">Acessibilidade</strong>
+        <small data-i18n="accessibilityResources">Recursos de acessibilidade</small>
+      </button>
+
+      <button type="button" class="acao-card" id="btn-audio" onclick="alternarAudio()" aria-pressed="false">
+        <span><svg class="icon">
+            <use href="#icon-volume"></use>
+          </svg></span>
+        <strong data-i18n="enableReadAloud">Ativar leitura em voz alta</strong>
+        <small data-i18n="hearAnswers">Ouvir respostas</small>
+      </button>
+    </section>
+
+    <footer class="barra-rodape">
+      <span><svg class="icon">
+          <use href="#icon-shield"></use>
+        </svg><span data-i18n="secureEnvironment">Ambiente seguro e sigiloso</span></span>
+      <span data-i18n="dataProtected">Seus dados estão protegidos</span>
+      <span data-i18n="finishWhenDone">Encerre o atendimento ao finalizar</span>
+      <span data-i18n="totemMonitored">Este totem é monitorado</span>
+    </footer>
+  </section>
+
+  <div id="painel-idiomas" class="painel-idiomas" role="dialog" aria-label="Selecionar idioma" hidden>
+    <button type="button" class="btn-fechar-sinonimos" onclick="fecharIdiomas()" aria-label="Fechar idiomas">×</button>
+    <h2 data-i18n="languagePanelTitle">Idioma do atendimento</h2>
+    <p data-i18n="languagePanelText">Escolha o idioma da interface e das respostas dos assistentes.</p>
+    <div id="lista-idiomas" class="lista-idiomas"></div>
+  </div>
+
+  <div id="modal-personalizacao" class="modal-personalizacao" role="dialog" aria-modal="true"
+    aria-labelledby="titulo-personalizacao" hidden>
+    <div class="modal-conteudo">
+      <div class="modal-topo">
+        <div>
+          <p class="modal-etiqueta">Central de acessibilidade</p>
+          <h2 id="titulo-personalizacao">Ajustes para o atendimento</h2>
+        </div>
+
+        <button type="button" class="btn-fechar-modal" onclick="fecharPersonalizacao()"
+          aria-label="Fechar personalização">
+          ×
+        </button>
+      </div>
+
+      <div class="painel-acessibilidade">
+        <section class="grupo-acessibilidade">
+          <h3>Apoio de leitura</h3>
+          <div class="grade-acessibilidade">
+            <button type="button" class="acessibilidade-opcao" onclick="abrirVLibras()">
+              <svg class="icon">
+                <use href="#icon-access"></use>
+              </svg>
+              <strong>VLibras</strong>
+              <small>Tradutor oficial do GOV</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarSinonimos(this)" aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-book"></use>
+              </svg>
+              <strong>Sinônimos e significados</strong>
+              <small>Clique nas palavras do chat</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="grupo-acessibilidade">
+          <h3>Controle de fonte</h3>
+          <div class="grade-acessibilidade">
+            <button type="button" class="acessibilidade-opcao" onclick="aumentarFonte()">
+              <svg class="icon">
+                <use href="#icon-type"></use>
+              </svg>
+              <strong>Tamanho de fonte</strong>
+              <small>Aumentar leitura do chat</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAcessibilidade('texto-destaque', this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-bold"></use>
+              </svg>
+              <strong>Letras destacadas</strong>
+              <small>Texto mais forte</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAcessibilidade('espaco-linhas', this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-lines"></use>
+              </svg>
+              <strong>Espaço entre linhas</strong>
+              <small>Mais respiro no texto</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAcessibilidade('espaco-letras', this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-letters"></use>
+              </svg>
+              <strong>Espaço entre letras</strong>
+              <small>Melhor leitura visual</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="grupo-acessibilidade">
+          <h3>Navegação</h3>
+          <div class="grade-acessibilidade">
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAudio()" aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-volume"></use>
+              </svg>
+              <strong>Leitor de sites</strong>
+              <small>Ler respostas em voz alta</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAcessibilidade('modo-leitura', this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-reader"></use>
+              </svg>
+              <strong>Modo de leitura</strong>
+              <small>Reduzir distrações visuais</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAcessibilidade('mascara-leitura', this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-mask"></use>
+              </svg>
+              <strong>Máscara de leitura</strong>
+              <small>Foco no conteúdo principal</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="alternarAcessibilidade('destacar-links', this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-link"></use>
+              </svg>
+              <strong>Destaque de links</strong>
+              <small>Links mais visíveis</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao"
+              onclick="alternarAcessibilidade('pausar-animacoes', this)" aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-pause"></use>
+              </svg>
+              <strong>Pausar animações</strong>
+              <small>Menos movimento na tela</small>
+            </button>
+          </div>
+        </section>
+
+        <section class="grupo-acessibilidade">
+          <h3>Controle de cor</h3>
+          <div class="grade-acessibilidade">
+            <button type="button" id="btn-contraste" class="acessibilidade-opcao" onclick="alternarContraste()"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-contrast"></use>
+              </svg>
+              <strong>Contraste de cores</strong>
+              <small>Alto contraste</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao"
+              onclick="alternarAcessibilidade('intensidade-cores', this)" aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-drop"></use>
+              </svg>
+              <strong>Intensidade de cores</strong>
+              <small>Suavizar tons da interface</small>
+            </button>
+            <button type="button" class="acessibilidade-opcao" onclick="abrirOpcoesDaltonismo(this)"
+              aria-pressed="false">
+              <svg class="icon">
+                <use href="#icon-palette"></use>
+              </svg>
+              <strong>Modo daltônico</strong>
+              <small>Escolher perfil de cores</small>
+            </button>
+          </div>
+        </section>
+
+        <div class="modal-acoes">
+          <button type="button" class="btn-secundario" onclick="restaurarAcessibilidade()">Restaurar
+            acessibilidade</button>
+          <button type="button" class="btn-salvar-personalizacao" onclick="fecharPersonalizacao()">Concluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <aside id="painel-sinonimos" class="painel-sinonimos" aria-live="polite" hidden>
+    <button type="button" class="btn-fechar-sinonimos" onclick="fecharPainelSinonimos()"
+      aria-label="Fechar sinônimos">×</button>
+    <p class="sinonimos-etiqueta">Sinônimos e significados</p>
+    <h2 id="sinonimo-palavra">Clique em uma palavra</h2>
+    <p id="sinonimo-descricao">Clique em uma frase ou palavra do chat para ver uma explicação simples.</p>
+    <div id="sinonimo-lista" class="sinonimo-lista"></div>
+  </aside>
+
+  <aside id="painel-daltonismo" class="painel-daltonismo" aria-live="polite" hidden>
+    <button type="button" class="btn-fechar-sinonimos" onclick="fecharOpcoesDaltonismo()"
+      aria-label="Fechar modos de daltonismo">×</button>
+    <p class="sinonimos-etiqueta">Modo daltônico</p>
+    <h2>Escolha a adaptação visual</h2>
+    <div class="opcoes-daltonismo">
+      <button type="button" onclick="aplicarDaltonismo('deuteranopia')">
+        <strong>Deuteranopia</strong>
+        <small>Dificuldade com tons de verde. Vermelhos ficam mais terrosos e verdes mais bege.</small>
+      </button>
+      <button type="button" onclick="aplicarDaltonismo('protanopia')">
+        <strong>Protanopia</strong>
+        <small>Dificuldade com vermelho. Vermelho vivo vira marrom escuro com contraste reforçado.</small>
+      </button>
+      <button type="button" onclick="aplicarDaltonismo('tritanopia')">
+        <strong>Tritanopia</strong>
+        <small>Dificuldade com azul. Azuis ficam mais escuros e a interface ganha apoio âmbar.</small>
+      </button>
+      <button type="button" onclick="aplicarDaltonismo('acromatopsia')">
+        <strong>Acromatopsia</strong>
+        <small>Baixa ou nenhuma percepção de cores. Tela em escala de cinza com alto contraste.</small>
+      </button>
+    </div>
+    <button type="button" class="btn-remover-daltonismo" onclick="removerDaltonismo()">Remover adaptação</button>
+  </aside>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <div id="modal-conversas" class="modal-conversas" role="dialog" aria-label="Conversas salvas" hidden>
+    <div class="modal-conteudo">
+      <div class="modal-topo">
+        <h2>Conversas salvas</h2>
+        <button type="button" class="btn-fechar-modal" onclick="fecharModalConversas()">×</button>
+      </div>
+
+      <div id="lista-conversas" class="lista-conversas">
+        <!-- Conversas serão renderizadas aqui -->
+      </div>
+
+      <div class="modal-acoes">
+        <button type="button" onclick="novaConversa()">Nova conversa</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sistema de Fluxos Conversacionais -->
+  <script src="fluxos.js"></script>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    function iniciarVLibras() {
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (!isMobile) {
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      }
+    }
+
+    window.addEventListener("load", iniciarVLibras);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "id": "documentos",
+  "nome": "Documentos Acadêmicos",
+  "keywords": [
+    "documentos",
+    "declaração",
+    "histórico",
+    "comprovante",
+    "certidão",
+    "certificado"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "mensagem": "Perfeito! Posso ajudá-lo com documentos acadêmicos. Qual documento você necessita? (declaração de matrícula, histórico escolar, comprovante de vínculo ou outro)"
+    },
+    {
+      "id": 2,
+      "mensagem": "Entendi que você precisa de: {tipoDocumento}. Qual é o seu RA (Registro Acadêmico) para processar essa solicitação?"
+    },
+    {
+      "id": 3,
+      "mensagem": "Obrigado! Você gostaria de retirar o documento na secretaria ou preferir que seja enviado por email?"
+    },
+    {
+      "id": 4,
+      "mensagem": "Sua solicitação foi registrada! {tipoDocumento} será preparado em até 2 dias úteis. Você receberá uma confirmação assim que estiver pronto."
+    }
+  ]
+}
