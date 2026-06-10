@@ -1,3 +1,23 @@
+ CampusIA foi desenvolvido com o objetivo de facilitar o acesso a informações acadêmicas por meio de uma experiência conversacional intuitiva e acessível.
+
+## 📷 Demonstração
+
+<p align="center">
+  <img src="images/tela-inicial.png" width="900">
+</p>
+
+<p align="center">
+  <img src="images/chat-eva.png" width="900">
+</p>
+
+<p align="center">
+  <img src="images/chat-elias.png" width="900">
+</p>
+
+<p align="center">
+  <img src="images/chat-dani.png" width="900">
+</p>
+
 # 🎯 Sistema de Fluxos Conversacionais
 
 Motor de fluxos baseado em JSON para assistente acadêmico EVA. A IA não controla a lógica da conversa - apenas reescreve mensagens de forma natural.
