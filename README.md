@@ -3,7 +3,7 @@
 ## 📷 Demonstração
 
 <p align="center">
-  <img src="images/tela-inicial.png" width="900">
+  <img src="images/TELA-INICIAL.png" width="900">
 </p>
 
 <p align="center">
