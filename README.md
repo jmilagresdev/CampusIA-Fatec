@@ -7,15 +7,15 @@
 </p>
 
 <p align="center">
-  <img src="images/CONVERSA EVA.jpg" width="900">
+  <img src="images/conversa-eva.jpg" width="900">
 </p>
 
 <p align="center">
-  <img src="images/CONVERSA ELIAS.jpg" width="900">
+  <img src="images/conversa-elias.jpg" width="900">
 </p>
 
 <p align="center">
-  <img src="images/CONVERSA DANI.jpg" width="900">
+  <img src="images/conversa-dani.jpg" width="900">
 </p>
 
 # 🎯 Sistema de Fluxos Conversacionais
